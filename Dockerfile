@@ -13,6 +13,7 @@ ENV NODE_VERSION 5.5.0
 RUN apt-get -qq update && \
     apt-get -qqy upgrade; \
     apt-get -qqy install \
+      build-essential \
       software-properties-common \
       openssl \
       ca-certificates \
