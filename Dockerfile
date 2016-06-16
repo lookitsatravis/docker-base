@@ -7,7 +7,6 @@ ENV LANG en_US.UTF-8
 ENV LC_ALL en_US.UTF-8
 ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 ENV NPM_CONFIG_LOGLEVEL info
-ENV NODE_VERSION 5.5.0
 
 # System upgrade
 RUN apt-get -qq update && \
@@ -30,7 +29,8 @@ RUN apt-get -qq update && \
       libssl-dev \
       libxslt-dev \
       libxml2-dev \
-      libffi-dev; \
+      libffi-dev \
+      wget; \
     apt-get clean -y; \
     apt-get autoremove -y
 
