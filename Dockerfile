@@ -1,5 +1,5 @@
-FROM phusion/baseimage:0.10.0
-MAINTAINER Travis Vignon <travis@lookitsatravis.com>
+FROM phusion/baseimage:0.11
+LABEL maintainer="Travis Vignon <travis@lookitsatravis.com"
 
 ENV DEBIAN_FRONTEND noninteractive
 RUN locale-gen en_US.UTF-8
@@ -39,4 +39,4 @@ RUN locale-gen en_US.UTF-8 && dpkg-reconfigure locales
 
 RUN echo "America/Chicago" > /etc/timezone; dpkg-reconfigure -f noninteractive tzdata
 
-ONBUILD CMD /bin/bash
+CMD /bin/bash
